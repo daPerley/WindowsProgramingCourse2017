@@ -1,0 +1,20 @@
+﻿<Window x:Class="HelloWPF.ExerciseOneWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWPF"
+        mc:Ignorable="d"
+        Title="ExerciseOneWindow" Height="300" Width="300">
+    <Grid>
+        <Canvas>
+            <Line X1="10" Y1="20" X2="100" Y2="20" Stroke="BlanchedAlmond" StrokeThickness="10"/>
+            <Rectangle Panel.ZIndex="4" Fill="Yellow" Canvas.Left="10" Canvas.Top="50" Width="60" Height="60"/>
+            <Ellipse Panel.ZIndex="2" Fill="Turquoise" Height="200" Width="200" StrokeThickness="5" Stroke="PaleTurquoise" Canvas.Left="70" Canvas.Top="45"/>
+        </Canvas>
+
+        <Button Width="60px" Height="40px">
+            <Image Source="images/progress.jpg" Stretch="Fill"></Image>
+        </Button>
+    </Grid>
+</Window>
