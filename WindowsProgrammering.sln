@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseThreeApplication", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurnInTwentySixth", "TurnInTwentySixth\TurnInTwentySixth.csproj", "{43F49783-1592-40E6-A2E0-0879264E51DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseForm", "ExerciseForm\ExerciseForm.csproj", "{F83DF973-4D69-4054-8E49-F6345264ED67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{43F49783-1592-40E6-A2E0-0879264E51DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43F49783-1592-40E6-A2E0-0879264E51DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43F49783-1592-40E6-A2E0-0879264E51DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F83DF973-4D69-4054-8E49-F6345264ED67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F83DF973-4D69-4054-8E49-F6345264ED67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F83DF973-4D69-4054-8E49-F6345264ED67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F83DF973-4D69-4054-8E49-F6345264ED67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
