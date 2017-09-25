@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Win32;
+using System;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace TurnInTwentySixth
 {
@@ -23,6 +12,30 @@ namespace TurnInTwentySixth
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        public void Load_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Media files (*.mp4;)|*.mp4;";
+
+            if (openFileDialog.ShowDialog() == true)
+                video.Source = new Uri(openFileDialog.FileName);
+        }
+
+        public void btnPlay_Click(object sender, RoutedEventArgs e)
+        {
+            video.Play();
+        }
+
+        public void btnPause_Click(object sender, RoutedEventArgs e)
+        {
+            video.Pause();
+        }
+
+        public void btnStop_Click(object sender, RoutedEventArgs e)
+        {
+            video.Stop();
         }
     }
 }

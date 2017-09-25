@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TurnInTwentySixth"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Media Player" Height="350" Width="525">
     <Grid>
-        
+        <ToolBarTray Height="45" VerticalAlignment="Top" Background="Turquoise">
+            <ToolBar Background="Turquoise">
+                <Button Name="load" Click="Load_Click" Height="43">
+                    <Image Source="icons/load.png" Stretch="Fill"/>
+                </Button>
+                <Separator />
+                <Button Name="play" Click="btnPlay_Click" Height="43">
+                    <Image Source="icons/play.png" Stretch="Fill"/>
+                </Button>
+                <Button Name="pause" Click="btnPause_Click" Height="38">
+                    <Image Source="icons/pause.png" Stretch="Fill"/>
+                </Button>
+                <Button Name="stop" Click="btnStop_Click" Height="38">
+                    <Image Source="icons/stop.png" Stretch="Fill"/>
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+        <MediaElement Name="video" Source="video\video.mp4" LoadedBehavior="Manual" Margin="0,45,0,0"/>
     </Grid>
 </Window>
