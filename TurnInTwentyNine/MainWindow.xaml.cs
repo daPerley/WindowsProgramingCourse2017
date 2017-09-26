@@ -1,5 +1,4 @@
-﻿using System.Collections.ObjectModel;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using TurnInTwentyNine.Models;
 
@@ -10,18 +9,19 @@ namespace TurnInTwentyNine
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ObservableCollection<Customer> customers;
+        //private Customer customer;
         private bool isCompany;
         private bool wantNewsletter;
+        private ApplicationDbContext _context;
 
         public MainWindow()
         {
+            _context = new ApplicationDbContext();
+
             InitializeComponent();
 
             if (spCompanyOnly != null)
                 spCompanyOnly.Visibility = Visibility.Collapsed;
-
-            //DataContext = customers;
         }
 
         public void BtnSend_Click(object sender, RoutedEventArgs e)
@@ -42,6 +42,17 @@ namespace TurnInTwentyNine
 
             if (isCompany)
                 customer.Company = txtCompany.Text;
+
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+
+            txtContactPerson.Text = string.Empty;
+            txtStreet.Text = string.Empty;
+            txtPostalCode.Text = string.Empty;
+            txtCity.Text = string.Empty;
+            txtPhone.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtNotes.Text = string.Empty;
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
