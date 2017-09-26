@@ -12,12 +12,9 @@ namespace TurnInTwentyNine
         //private Customer customer;
         private bool isCompany;
         private bool wantNewsletter;
-        private ApplicationDbContext _context;
 
         public MainWindow()
         {
-            _context = new ApplicationDbContext();
-
             InitializeComponent();
 
             if (spCompanyOnly != null)
@@ -43,16 +40,18 @@ namespace TurnInTwentyNine
             if (isCompany)
                 customer.Company = txtCompany.Text;
 
-            _context.Customers.Add(customer);
-            _context.SaveChanges();
+            var save = Customer.AddCustomer(customer);
 
-            txtContactPerson.Text = string.Empty;
-            txtStreet.Text = string.Empty;
-            txtPostalCode.Text = string.Empty;
-            txtCity.Text = string.Empty;
-            txtPhone.Text = string.Empty;
-            txtEmail.Text = string.Empty;
-            txtNotes.Text = string.Empty;
+            if (save)
+            {
+                txtContactPerson.Text = string.Empty;
+                txtStreet.Text = string.Empty;
+                txtPostalCode.Text = string.Empty;
+                txtCity.Text = string.Empty;
+                txtPhone.Text = string.Empty;
+                txtEmail.Text = string.Empty;
+                txtNotes.Text = string.Empty;
+            }
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
