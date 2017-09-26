@@ -23,19 +23,22 @@ namespace TurnInTwentySixth
                 video.Source = new Uri(openFileDialog.FileName);
         }
 
-        public void btnPlay_Click(object sender, RoutedEventArgs e)
+        public void BtnPlay_Click(object sender, RoutedEventArgs e)
         {
-            video.Play();
+            if (video.Source != null)
+                video.Play();
         }
 
-        public void btnPause_Click(object sender, RoutedEventArgs e)
+        public void BtnPause_Click(object sender, RoutedEventArgs e)
         {
-            video.Pause();
+            if (video.Source != null)
+                video.Pause();
         }
 
-        public void btnStop_Click(object sender, RoutedEventArgs e)
+        public void BtnStop_Click(object sender, RoutedEventArgs e)
         {
-            video.Stop();
+            if (video.Source != null)
+                video.Stop();
         }
     }
 }

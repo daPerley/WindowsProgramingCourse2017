@@ -93,18 +93,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="video\video2.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Folder Include="video\" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="icons\stop.png" />
     <Resource Include="icons\pause.png" />
     <Resource Include="icons\load.png" />
     <Resource Include="icons\play.png" />
-    <Content Include="video\video.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

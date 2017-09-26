@@ -13,17 +13,17 @@
                     <Image Source="icons/load.png" Stretch="Fill"/>
                 </Button>
                 <Separator />
-                <Button Name="play" Click="btnPlay_Click" Height="43">
+                <Button Name="play" Click="BtnPlay_Click" Height="43">
                     <Image Source="icons/play.png" Stretch="Fill"/>
                 </Button>
-                <Button Name="pause" Click="btnPause_Click" Height="38">
+                <Button Name="pause" Click="BtnPause_Click" Height="38">
                     <Image Source="icons/pause.png" Stretch="Fill"/>
                 </Button>
-                <Button Name="stop" Click="btnStop_Click" Height="38">
+                <Button Name="stop" Click="BtnStop_Click" Height="38">
                     <Image Source="icons/stop.png" Stretch="Fill"/>
                 </Button>
             </ToolBar>
         </ToolBarTray>
-        <MediaElement Name="video" Source="video\video.mp4" LoadedBehavior="Manual" Margin="0,45,0,0"/>
+        <MediaElement Name="video" LoadedBehavior="Manual" Margin="0,45,0,0"/>
     </Grid>
 </Window>
