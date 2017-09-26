@@ -1,6 +1,8 @@
-﻿namespace TurnInTwentyNine.Models
+﻿using System.Linq;
+
+namespace TurnInTwentyNine.Models
 {
-    public class Customer : BindableBase
+    public class Customer
     {
         public int Id { get; set; }
         public bool IsCompany { get; set; }
@@ -31,6 +33,25 @@
             }
 
             return true;
+        }
+
+        public static Customer FindCustomer(string search)
+        {
+            Customer customer = null;
+
+            try
+            {
+                var _context = new ApplicationDbContext();
+
+                customer = _context.Customers.FirstOrDefault(c => c.Phone == search || c.Email == search);
+            }
+            catch (System.Exception)
+            {
+
+                return customer;
+            }
+
+            return customer;
         }
     }
 }

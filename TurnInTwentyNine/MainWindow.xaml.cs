@@ -11,7 +11,7 @@ namespace TurnInTwentyNine
     {
         //private Customer customer;
         private bool isCompany;
-        private bool wantNewsletter;
+        private bool wantNewsletter = false;
 
         public MainWindow()
         {
@@ -19,6 +19,21 @@ namespace TurnInTwentyNine
 
             if (spCompanyOnly != null)
                 spCompanyOnly.Visibility = Visibility.Collapsed;
+
+            if (spNotFound != null)
+                spNotFound.Visibility = Visibility.Collapsed;
+
+            if (spFound != null)
+                spFound.Visibility = Visibility.Collapsed;
+
+            DataContext = new Customer()
+            {
+                IsCompany = false,
+                Birthday = "1995-08-13",
+                NewsLetter = false
+            };
+
+            DataContext = new Customer();
         }
 
         public void BtnSend_Click(object sender, RoutedEventArgs e)
@@ -46,11 +61,33 @@ namespace TurnInTwentyNine
             {
                 txtContactPerson.Text = string.Empty;
                 txtStreet.Text = string.Empty;
+                txtCompany.Text = string.Empty;
                 txtPostalCode.Text = string.Empty;
                 txtCity.Text = string.Empty;
                 txtPhone.Text = string.Empty;
                 txtEmail.Text = string.Empty;
                 txtNotes.Text = string.Empty;
+            }
+        }
+
+        public void BtnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            if (spNotFound != null)
+                spNotFound.Visibility = Visibility.Collapsed;
+
+            if (spFound != null)
+                spFound.Visibility = Visibility.Collapsed;
+
+            var customer = Customer.FindCustomer(txtSearch.Text);
+
+            if (customer != null)
+            {
+                tbCustomerName.Text = customer.ContactPerson;
+                spFound.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                spNotFound.Visibility = Visibility.Visible;
             }
         }
 
