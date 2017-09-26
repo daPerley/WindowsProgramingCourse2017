@@ -26,8 +26,8 @@
 
         <TextBlock Grid.Row="1" HorizontalAlignment="Right" Margin="5" Text="Omfattning"/>
         <StackPanel Name="spExtent" Orientation="Horizontal" Grid.Row="1" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-            <RadioButton GroupName="heltid" Checked="RadioButton_Checked"  Content="Heltid" Margin="5" IsChecked="True"/>
-            <RadioButton GroupName="deltid" Checked="RadioButton_Checked" Content="Deltid" Margin="5" />
+            <RadioButton GroupName="extent" Checked="RadioButton_Checked"  Content="Heltid" Margin="5" IsChecked="True"/>
+            <RadioButton GroupName="extent" Checked="RadioButton_Checked" Content="Deltid" Margin="5" />
         </StackPanel>
 
         <TextBlock Grid.Row="2" Text="Jag kan" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5"/>

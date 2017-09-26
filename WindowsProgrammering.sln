@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurnInTwentySixth", "TurnIn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseFormTwentyFifth", "ExerciseForm\ExerciseFormTwentyFifth.csproj", "{F83DF973-4D69-4054-8E49-F6345264ED67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurnInTwentyNine", "TurnInTwentyNine\TurnInTwentyNine.csproj", "{B5E95DBE-7AB5-4886-969B-863A092E02E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurnInTwentyNinth", "TurnInTwentyNine\TurnInTwentyNinth.csproj", "{B5E95DBE-7AB5-4886-969B-863A092E02E3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseOneTwentySixth", "ExerciseOneTwentySix\ExerciseOneTwentySixth.csproj", "{FA25A8B9-D81C-45DD-B146-5AA218E7663D}"
 EndProject

@@ -5,8 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TurnInTwentyNine"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="700" Width="525">
+    <Grid Margin="25">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.4*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="5">
+            <TextBlock HorizontalAlignment="Left" Margin="5" Text="Kundtyp"/>
+            <StackPanel Name="spIsCompany" Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <RadioButton GroupName="isCompany" Checked="RadioButton_Checked"  Content="Privat" Margin="5" IsChecked="True"/>
+                <RadioButton GroupName="isCompany" Checked="RadioButton_Checked" Content="Företag" Margin="5" />
+            </StackPanel>
+            <StackPanel x:Name="spCompanyOnly" Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <TextBlock Name="tbCompany" HorizontalAlignment="Left" Margin="5" Text="Företag"/>
+                <TextBox Name="txtCompany" Width="150" Height="20"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <TextBlock HorizontalAlignment="Left" Margin="5" Text="För- och efternamn"/>
+                <TextBox Name="txtContactPerson" Width="150" Height="20"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <TextBlock Text="Födelsedag" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5"/>
+                <Calendar Name="cBirthday" Grid.Row="4" Grid.Column="1" Margin="5" HorizontalAlignment="Left"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <TextBlock HorizontalAlignment="Left" Margin="5" Text="Gatuadress"/>
+                <TextBox Name="txtStreet" Width="150" Height="20"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <TextBlock HorizontalAlignment="Left" Margin="5" Text="Postkod"/>
+                <TextBox Name="txtPostalCode" Width="150" Height="20"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <TextBlock HorizontalAlignment="Left" Margin="5" Text="Postadress"/>
+                <TextBox Name="txtCity" Width="150" Height="20"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <TextBlock HorizontalAlignment="Left" Margin="5" Text="Telefonnummer"/>
+                <TextBox Name="txtPhone" Width="150" Height="20"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <TextBlock HorizontalAlignment="Left" Margin="5" Text="Email"/>
+                <TextBox Name="txtEmail" Width="150" Height="20"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <TextBlock HorizontalAlignment="Left" Margin="5" Text="Nyhetesbrev?"/>
+                <CheckBox Name="cbNewsletter" Content="Ja tack!" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Margin="5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <TextBlock HorizontalAlignment="Left" Margin="5" Text="Anteckningar"/>
+                <TextBox Name="txtNotes" Width="150" Height="140"></TextBox>
+            </StackPanel>
+            <Button Width="100" Height="20" Margin="5" Click="BtnSend_Click" Content="Skicka"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            
+        </StackPanel>
     </Grid>
 </Window>
