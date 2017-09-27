@@ -7,6 +7,29 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock HorizontalAlignment="Center" Grid.ColumnSpan="3" Text="Timer" FontSize="40"/>
+
+        <Label x:Name="TimerLabel" HorizontalAlignment="Center" Margin="0,55,0,0" Grid.ColumnSpan="3" FontFamily="Segoe UI" FontSize="50" Content="{Binding}"/>
+
+        <Button Click="BtnStart_Timer" Grid.Column="0" Content="Start"/>
+        <Button Click="BtnStop_Timer" Grid.Column="1" HorizontalAlignment="Center" Content="Stop"/>
+        <Button Click="BtnReset_Timer" Grid.Column="2" Content="Reset"/>
+
+        <StatusBar Grid.ColumnSpan="3" VerticalAlignment="Bottom" Background="LightGray">
+            <StatusBarItem>
+                <TextBlock>
+                    Copyright 2017 Perly Gustafsson 
+                    <Hyperlink NavigateUri="http://daperley.com/" RequestNavigate="Hyperlink_RequestNavigate">
+                        www.daperley.com/
+                    </Hyperlink>
+                </TextBlock>
+            </StatusBarItem>
+        </StatusBar>
     </Grid>
 </Window>
