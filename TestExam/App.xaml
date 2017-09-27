@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:TestExam"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="Resources/ButtonStyles.xaml"/>
     </Application.Resources>
 </Application>

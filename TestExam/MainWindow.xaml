@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestExam"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="400" Width="525">
     <Grid>
-        
+        <ToolBarTray Height="50" VerticalAlignment="Top" Background="Turquoise">
+            <ToolBar Background="Turquoise">
+                <Button Name="load" Click="BtnStart_Click" Height="45" Content="New game"/>
+                <Button Name="play" Click="BtnExit_Click" Height="45" Content="Exit"/>
+            </ToolBar>
+        </ToolBarTray>
+
+        <Grid Name="TicTacToe" Height="300" Width="300" Margin="0,50,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Name="OneOne" Click="BtnTic_Click" Grid.Row="0" Grid.Column="0"/>
+            <Button Name="OneTwo" Click="BtnTic_Click" Grid.Row="1" Grid.Column="0"/>
+            <Button Name="OneThree" Click="BtnTic_Click" Grid.Row="2" Grid.Column="0"/>
+
+            <Button Name="TwoOne" Click="BtnTic_Click" Grid.Row="0" Grid.Column="1"/>
+            <Button Name="TwoTwo" Click="BtnTic_Click" Grid.Row="1" Grid.Column="1"/>
+            <Button Name="TwoThree" Click="BtnTic_Click" Grid.Row="2" Grid.Column="1"/>
+
+            <Button Name="ThreeOne" Click="BtnTic_Click" Grid.Row="0" Grid.Column="2"/>
+            <Button Name="ThreeTwo" Click="BtnTic_Click" Grid.Row="1" Grid.Column="2"/>
+            <Button Name="ThreeThree" Click="BtnTic_Click" Grid.Row="2" Grid.Column="2"/>
+        </Grid>
     </Grid>
 </Window>
