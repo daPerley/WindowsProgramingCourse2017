@@ -17,8 +17,10 @@ namespace ExerciseTwoTwentySeventh
 
             TimerLabel.DataContext = "00:00:00";
 
-            timer = new DispatcherTimer();
-            timer.Interval = new TimeSpan(0, 0, 0, 1);
+            timer = new DispatcherTimer
+            {
+                Interval = new TimeSpan(0, 0, 0, 1)
+            };
             timer.Tick += Thicker;
         }
 
